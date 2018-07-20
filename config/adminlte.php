@@ -120,10 +120,15 @@ return [
             'icon'      => 'money',
             'submenu'   => [
                 [
-                    'text'      => 'Saldo',
+                    'text'      => 'Crédito',
                     'url'       => 'admin/balance',
                     'icon'      => 'credit-card-alt',
-                    'active'    => ['admin/balance', 'content', 'content/*']
+                    'active'    => [
+                                        'admin/balance',
+                                        'admin/balance/deposit',
+                                        'content',
+                                        'content/*'
+                                    ]
                 ],
                 [
                     'text'      => 'Histórico',
@@ -168,6 +173,7 @@ return [
 
     'plugins' => [
         'datatables' => true,
-        'select2'    => true
+        'select2'    => true,
+        'jquery_mask' => true
     ],
 ];
