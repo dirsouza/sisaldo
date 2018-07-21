@@ -29,3 +29,11 @@ Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->
     
     Route::get('historic', 'HistoricController@index')->name('historic.index');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
